@@ -117,8 +117,10 @@ export default {
         },
 
         setPlace(place, dragend = false) {
+            /*
             for (const component of place.address_components) {
                 const componentType = component.types[0]
+
                 switch (componentType) {
                     case 'postal_code': {
                         Nova.$emit('zip-code-update', component.long_name)
@@ -140,9 +142,10 @@ export default {
                         Nova.$emit('country-update', component.long_name)
                         break
                 }
-            }
 
+            }
             Nova.$emit('address-update', place.formatted_address)
+            */
 
             if (dragend) {
                 this.latitude = place.geometry.location.lat

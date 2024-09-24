@@ -83,8 +83,9 @@ export default {
                         break
                 }
             }
+            this.value = place.name
 
-            this.value = place.formatted_address
+            Nova.$emit('address-update', place.name);
             Nova.$emit('latitude-update', place.geometry.location.lat())
             Nova.$emit('longitude-update', place.geometry.location.lng())
         }
